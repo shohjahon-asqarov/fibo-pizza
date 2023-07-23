@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply text-black;
+  }
+  h1 {
+    @apply text-3xl;
+  }
+
+  h2 {
+    @apply text-2xl font-bold;
+  }
+
+  h3 {
+    @apply text-2xl font-bold;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-7xl mx-auto px-5;
+  }
+
+  .btn-gray {
+    @apply rounded-3xl bg-gray font-bold text-sm text-btn-gray-text py-3 px-6 inline-block;
+  }
+
+  .btn-yellow {
+    @apply rounded-lg bg-yellow font-bold text-base text-black py-2.5  px-6 inline-block;
+  }
+}
