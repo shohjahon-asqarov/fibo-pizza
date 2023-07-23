@@ -17,11 +17,14 @@
   h3 {
     @apply text-2xl font-bold;
   }
+  a {
+    @apply inline-block;
+  }
 }
 
 @layer components {
   .container {
-    @apply max-w-7xl mx-auto px-5;
+    @apply max-w-7xl mx-auto px-5 relative !overflow-hidden;
   }
 
   .btn-gray {
@@ -30,5 +33,9 @@
 
   .btn-yellow {
     @apply rounded-lg bg-yellow font-bold text-base text-black py-2.5  px-6 inline-block;
+  }
+
+  .section-text {
+    @apply text-yellow font-extrabold text-3xl;
   }
 }

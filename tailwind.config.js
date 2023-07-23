@@ -13,6 +13,10 @@ module.exports = withMT({
         'gray': '#F3F3F7' ,
         'btn-gray-text': '#696F7A' ,
         'blue': '#E3ECF5'
+      },
+      screens: {
+        'max': '1250px' ,
+        'close-tab': '1100px' ,
       }
     },
   },

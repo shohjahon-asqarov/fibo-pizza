@@ -5,6 +5,8 @@ import App from './App';
 // import styles 
 import './css/tailwind.css'
 import './scss/main.scss'
+
+
 import { BrowserRouter } from 'react-router-dom';
 
 import 'bootstrap-icons/font/bootstrap-icons.css'

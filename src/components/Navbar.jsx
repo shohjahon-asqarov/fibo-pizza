@@ -1,20 +1,12 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { logo } from '../assets/data'
-
-
-import {
-  Tabs,
-  TabsHeader,
-  TabsBody,
-  Tab,
-  TabPanel,
-} from "@material-tailwind/react";
-import Button from '../ui/Button';
-
+import { NavLink } from 'react-router-dom';
+import { useState } from 'react';
 
 export default function Navbar() {
 
-  const [activeTab, setActiveTab] = useState("Пицца");
+  const [open, setOpen] = useState(false)
+
   const data = [
     {
       label: "Пицца",
@@ -59,15 +51,28 @@ export default function Navbar() {
 
   ];
 
+  window.addEventListener("resize", () => {
+    setOpen(false)
+  })
+
+  window.addEventListener("scroll", () => {
+    if (open) {
+      setOpen(false)
+    }
+  })
+
 
   return (
-    <header className='pt-5'>
+
+    <header className='pt-5' >
 
       <div className="top flex justify-between items-center">
         <a href="#">
-          <img src={logo} alt="site logo" />
+          <img className='md:w-auto w-16' src={logo} alt="site logo" />
         </a>
-        <div className="flex gap-5 items-center">
+
+
+        <div className="hidden gap-5 items-center close-tab:flex">
           <a href="#" className='btn-gray'>
             Заказать звонок
           </a>
@@ -76,23 +81,21 @@ export default function Navbar() {
             998 93 917 07 31
           </a>
         </div>
+
+        <button onClick={() => setOpen(!open)} className='close-tab:hidden block'><i className={`text-2xl ${open ? 'bi bi-x' : 'bi bi-list'}`}></i></button>
       </div>
 
-      <div className="tabs flex justify-between py-6 items-center">
-        <Tabs className="inline-block" value={activeTab}>
-          <TabsHeader>
-            {data.map(({ label, value }) => (
-              <Tab key={value} value={value}>
-                <span className='font-semibold px-3 py-0.5 inline-block text-base'>{label}</span>
-              </Tab>
-            ))}
-          </TabsHeader>
 
-        </Tabs>
-
-        <Button text={'Корзина'} />
+      <div onClick={() => setOpen(false)} className={`mobile-nav bg-yellow flex flex-col py-10 gap-4 items-center rounded-2xl w-full right-0 sm:w-60 absolute sm:right-10 z-[60] close-tab:hidden ${open ? 'flex' : 'hidden'}`}>
+        {data.map((i, index) => {
+          return (
+            <NavLink className=' inline-block font-extrabold ' key={index} to={i.value}>{i.label}</NavLink>
+          )
+        })}
+        <a className='inline-block text-xl font-bold text-black py-4' href="#">
+          998 93 917 07 31
+        </a>
       </div>
-
     </header>
   )
 }
