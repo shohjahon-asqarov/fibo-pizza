@@ -61,7 +61,7 @@ export default function TabHeader({ open, setOpen }) {
 
     return (
         <nav className='sticky top-0 z-50 bg-white'>
-            <div className="tabs  justify-center py-6 items-center max:justify-between ">
+            <div className="tabs  justify-center py-6 items-center max:justify-between flex">
                 <Tabs className="hidden close-tab:flex" value={'Пицца'}>
                     <TabsHeader>
                         {data.map(({ label, value }) => (
