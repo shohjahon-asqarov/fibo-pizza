@@ -644,11 +644,9 @@ a {
 }
 
 .container {
-  position: relative;
   margin-left: auto;
   margin-right: auto;
   max-width: 80rem;
-  overflow: hidden !important;
   padding-left: 1.25rem;
   padding-right: 1.25rem;
 }
@@ -774,6 +772,10 @@ a {
   bottom: 1rem;
 }
 
+.bottom-5 {
+  bottom: 1.25rem;
+}
+
 .bottom-8 {
   bottom: 2rem;
 }
@@ -830,10 +832,6 @@ a {
   right: 0.25rem;
 }
 
-.right-10 {
-  right: 2.5rem;
-}
-
 .right-2 {
   right: 0.5rem;
 }
@@ -866,6 +864,10 @@ a {
   top: 50%;
 }
 
+.top-2 {
+  top: 0.5rem;
+}
+
 .top-2\/4 {
   top: 50%;
 }
@@ -882,10 +884,6 @@ a {
   top: 4%;
 }
 
-.top-2 {
-  top: 0.5rem;
-}
-
 .z-10 {
   z-index: 10;
 }
@@ -896,10 +894,6 @@ a {
 
 .z-50 {
   z-index: 50;
-}
-
-.z-\[100\] {
-  z-index: 100;
 }
 
 .z-\[2\] {
@@ -993,6 +987,10 @@ a {
 
 .mb-5 {
   margin-bottom: 1.25rem;
+}
+
+.mb-6 {
+  margin-bottom: 1.5rem;
 }
 
 .ml-0 {
@@ -2642,6 +2640,10 @@ a {
   padding-left: 0.75rem;
 }
 
+.pr-6 {
+  padding-right: 1.5rem;
+}
+
 .pt-0 {
   padding-top: 0px;
 }
@@ -2672,18 +2674,6 @@ a {
 
 .pt-px {
   padding-top: 1px;
-}
-
-.pr-4 {
-  padding-right: 1rem;
-}
-
-.pr-5 {
-  padding-right: 1.25rem;
-}
-
-.pr-6 {
-  padding-right: 1.5rem;
 }
 
 .text-left {

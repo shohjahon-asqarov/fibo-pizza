@@ -1,18 +1,32 @@
 import { useDispatch, useSelector } from "react-redux"
 import { deleteKorzina, minusCount, updateCount } from "../store/slices/Korzina";
 
+
+
+
 export default function Korzinka() {
+
     const products = useSelector((state) => state.korzina);
     const dispatch = useDispatch();
+
+    let sum = 0
+    products.data.map(i => {
+        if (i.count > 1) {
+            sum += i.price * i.count
+        } else {
+            sum += i.price
+        }
+    })
+
     return (
-        <div className="flex flex-col p-5 gap-4 b rounded-lg absolute top-30 right-10 z-[100] bg-white">
-            {products ? products.data.map((i, index) => {
+        <div className="flex flex-col gap-4 rounded-lg bg-white  border border-gray">
+            {products.data.length >= 1 ? products.data.map((i, index) => {
                 return (
                     <div key={index} className="bg-white relative news-card flex px-2 py-3 rounded-md gap-3 items-center">
                         <img className="w-20 h-20" src={i.img} alt="order img" />
                         <div className="pr-6">
                             <h3 className="text-sm font-bold mb-2">{i.title}</h3>
-                            
+
                             <div className="bg-[#F3F3F7] flex items-center justify-between w-[93px] rounded-lg text-btn-gray-text py-2">
 
                                 <button onClick={() => dispatch(updateCount(i))} className="py-1 px-3 ">
@@ -30,7 +44,7 @@ export default function Korzinka() {
                                 </button>
                             </div>
 
-                            <span>{i.price}</span>
+                            <span className="text-yellow font-bold absolute bottom-4 right-2">{i.price * i.count}₽</span>
                         </div>
 
                         <button className="absolute top-2 right-2 text-lg" onClick={() => dispatch(deleteKorzina(i))}>
@@ -39,10 +53,15 @@ export default function Korzinka() {
                     </div>
                 )
             }) :
-                <div>
-                    <h3>No items</h3>
+                <div className="no-data">
+                    <h3 className="text-xl text-btn-gray-text">No items</h3>
                 </div>
             }
+            <div className="flex justify-between absolute bottom-5 left-0 right-0 px-5">
+                <span className="font-semibold">Сумма заказа</span>
+                <span className="text-yellow font-bold">{sum}₽</span>
+            </div>
+
         </div>
     )
 }

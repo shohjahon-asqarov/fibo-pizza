@@ -10,8 +10,12 @@ import Stock from "./pages/Stock";
 import Button from "./ui/Button";
 import { ToastContainer } from "react-toastify";
 import Korzinka from "./ui/Korzinka";
+import { Drawer, IconButton } from "@material-tailwind/react";
+import { useState } from "react";
 
 export default function App() {
+
+  const [open, setOpen] = useState(false)
 
   const Home = () => {
     return (
@@ -27,10 +31,8 @@ export default function App() {
     <div>
       <div className="container">
         <Navbar />
-        <TabHeader />
+        <TabHeader open={open} setOpen={setOpen} />
 
-        <Korzinka />
-        
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/stock" element={<Stock />} />
@@ -55,6 +57,30 @@ export default function App() {
         draggable
         pauseOnHover
         theme="light" />
+
+
+      <Drawer placement="right" open={open} className="p-4">
+        <div className="mb-6 flex items-center justify-between">
+          <h2>Корзина</h2>
+          <IconButton onClick={() => setOpen(false)} variant="text" color="blue-gray" >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={2}
+              stroke="currentColor"
+              className="h-5 w-5"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </IconButton>
+        </div>
+        <Korzinka />
+      </Drawer>
     </div>
   )
 }

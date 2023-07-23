@@ -6,11 +6,13 @@ import {
     Tab,
 } from "@material-tailwind/react";
 
-import Button from '../ui/Button';
 import { NavLink } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 
-export default function TabHeader() {
+export default function TabHeader({ open, setOpen }) {
+
+    const num = useSelector((state) => state.korzina.data)
 
 
     const data = [
@@ -59,8 +61,8 @@ export default function TabHeader() {
 
     return (
         <nav className='sticky top-0 z-50 bg-white'>
-            <div className="tabs hidden justify-center py-6 items-center max:justify-between close-tab:flex">
-                <Tabs className="inline-block" value={'Пицца'}>
+            <div className="tabs  justify-center py-6 items-center max:justify-between ">
+                <Tabs className="hidden close-tab:flex" value={'Пицца'}>
                     <TabsHeader>
                         {data.map(({ label, value }) => (
                             <Tab key={value} value={value}>
@@ -71,7 +73,7 @@ export default function TabHeader() {
 
                 </Tabs>
 
-                <Button text={'Корзина'} />
+                <button onClick={() => setOpen(!open)} className='btn-yellow max:static fixed bottom-8 right-6'>Корзина | {num.length}</button>
             </div>
         </nav>
     )

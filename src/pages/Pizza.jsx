@@ -35,7 +35,7 @@ export default function Pizza() {
                             </div>
 
                             <div className="card-footer flex justify-between items-center">
-                                <span className="text-2xl font-bold">{p.price}</span>
+                                <span className="text-2xl font-bold">{p.price}₽</span>
                                 <button onClick={() => addProduct(p)} className="bg-yellow rounded-lg text-white font-bold text-sm py-2 px-5 active:scale-95">В корзину</button>
                             </div>
                         </div>

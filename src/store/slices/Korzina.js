@@ -1,7 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
 import { toast } from 'react-toastify';
 
-import { isEqual } from 'lodash';
 
 export const korzinaSlice = createSlice({
     name: 'korzina',
