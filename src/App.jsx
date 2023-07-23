@@ -9,6 +9,7 @@ import Pizza from "./pages/Pizza";
 import Stock from "./pages/Stock";
 import Button from "./ui/Button";
 import { ToastContainer } from "react-toastify";
+import Korzinka from "./ui/Korzinka";
 
 export default function App() {
 
@@ -27,9 +28,9 @@ export default function App() {
       <div className="container">
         <Navbar />
         <TabHeader />
-        <Button text='Корзина' />
 
-
+        <Korzinka />
+        
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/stock" element={<Stock />} />

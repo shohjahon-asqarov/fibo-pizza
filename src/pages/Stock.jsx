@@ -8,7 +8,7 @@ export default function Stock() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {stock.map((item, index) => {
                     return (
-                        <div className='stock-card rounded-[14px] cursor-pointer overflow-hidden'>
+                        <div key={index} className='stock-card rounded-[14px] cursor-pointer overflow-hidden'>
                             <div className="card-img">
                                 <img className='w-full' src={item.img} alt="stock img" />
                             </div>
