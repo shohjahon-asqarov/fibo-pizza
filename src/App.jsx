@@ -7,6 +7,8 @@ import News from "./components/News";
 import TabHeader from "./components/TabHeader";
 import Pizza from "./pages/Pizza";
 import Stock from "./pages/Stock";
+import Button from "./ui/Button";
+import { ToastContainer } from "react-toastify";
 
 export default function App() {
 
@@ -25,11 +27,11 @@ export default function App() {
       <div className="container">
         <Navbar />
         <TabHeader />
+        <Button text='Корзина' />
 
 
         <Routes>
           <Route path="/" element={<Home />} />
-
           <Route path="/stock" element={<Stock />} />
         </Routes>
 
@@ -40,7 +42,18 @@ export default function App() {
       <div className="container">
         <Footer />
       </div>
-      
+
+      <ToastContainer
+        position="bottom-right"
+        autoClose={1000}
+        hideProgressBar
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light" />
     </div>
   )
 }

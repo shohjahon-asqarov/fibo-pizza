@@ -1,6 +1,11 @@
+import { useDispatch, useSelector } from "react-redux";
 import { pizza } from "../assets/data";
 
+import { addKorzina } from '../store/slices/Korzina'
+
 export default function Pizza() {
+
+    const dispatch = useDispatch();
 
 
     return (
@@ -26,7 +31,7 @@ export default function Pizza() {
 
                             <div className="card-footer flex justify-between items-center">
                                 <span className="text-2xl font-bold">{p.price}</span>
-                                <button className="bg-yellow rounded-lg text-white font-bold text-sm py-2 px-5">В корзину</button>
+                                <button onClick={() => dispatch(addKorzina(p))} className="bg-yellow rounded-lg text-white font-bold text-sm py-2 px-5">В корзину</button>
                             </div>
                         </div>
                     )
