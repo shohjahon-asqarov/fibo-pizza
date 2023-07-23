@@ -11,7 +11,8 @@ module.exports = withMT({
         'c-desc': '#686466' ,
         'white': '#FFFFFF' ,
         'gray': '#F3F3F7' ,
-        'btn-gray-text': '#696F7A'
+        'btn-gray-text': '#696F7A' ,
+        'blue': '#E3ECF5'
       }
     },
   },

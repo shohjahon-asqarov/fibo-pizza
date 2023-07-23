@@ -61,7 +61,7 @@ export default function Navbar() {
 
 
   return (
-    <header>
+    <header className='pt-5'>
 
       <div className="top flex justify-between items-center">
         <a href="#">
