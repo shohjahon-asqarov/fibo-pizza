@@ -19,7 +19,7 @@ export default function Hero() {
 
     return (
 
-        <section data-aos="fade-up" className="mb-32">
+        <section data-aos="fade-up" className="mb-10">
             <Swiper className="w-full relative cursor-pointer"
                 slidesPerView={1}
                 loop

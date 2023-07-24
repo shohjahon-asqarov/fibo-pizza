@@ -71,7 +71,7 @@ export default function Navbar() {
     <header className='pt-5' >
 
       <div className="top flex justify-between items-center">
-        <a href="tel:+998939170731">
+        <a href="index.html">
           <img className='md:w-auto w-16' src={logo} alt="site logo" />
         </a>
 

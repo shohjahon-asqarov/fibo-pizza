@@ -26,7 +26,7 @@ export default function News() {
     ] ;
 
     return (
-        <section className="py-20">
+        <section className="pt-10">
             <h2 className="mb-10">Новинки</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-between gap-6">
                 {news.map((item, index) => {
