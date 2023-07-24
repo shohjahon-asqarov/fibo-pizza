@@ -1,16 +1,17 @@
+import { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
+
+
+// import componts and pages 
 import Delivery from "./components/Delivery";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
-import News from "./components/News";
 import TabHeader from "./components/TabHeader";
 import Pizza from "./pages/Pizza";
 import Stock from "./pages/Stock";
-import { ToastContainer } from "react-toastify";
 import Korzinka from "./ui/Korzinka";
 import { Drawer, IconButton } from "@material-tailwind/react";
-import { useEffect, useState } from "react";
 import Antipasti from "./pages/Antipasti";
 import Beverages from "./pages/Beverages";
 import Combo from "./pages/Combo";
@@ -20,19 +21,22 @@ import Soups from "./pages/Soups";
 import Paste from "./pages/Paste";
 
 
+// import scroll animation 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
+// import toastify container 
+import { ToastContainer } from "react-toastify";
 
 export default function App() {
 
+  // aos init 
   useEffect(() => {
     AOS.init();
   }, [])
 
+  // for korzinka 
   const [open, setOpen] = useState(false)
-
-
 
   return (
     <div>
@@ -40,6 +44,7 @@ export default function App() {
         <Navbar />
         <TabHeader open={open} setOpen={setOpen} />
 
+        {/* routes  */}
         <Routes>
           <Route path="/" element={<Hero />} />
           <Route path="/pizza" element={<Pizza />} />
@@ -58,7 +63,6 @@ export default function App() {
 
       <Footer />
 
-
       <ToastContainer
         position="bottom-right"
         autoClose={1000}
@@ -72,7 +76,8 @@ export default function App() {
         theme="light"
       />
 
-      <Drawer placement="right" open={open} className="p-4">
+      {/* korzinka right component  */}
+      <Drawer overlay={false} size={'400px'} placement="right" open={open} className="p-4">
         <div className="mb-6 flex items-center justify-between">
           <h2>Корзина</h2>
           <IconButton onClick={() => setOpen(false)} variant="text" color="blue-gray" >

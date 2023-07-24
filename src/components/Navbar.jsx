@@ -78,7 +78,7 @@ export default function Navbar() {
 
         <div className="hidden gap-5 items-center close-tab:flex">
           <a href="#" className='btn-gray'>
-            Заказать звонок
+            Request a call
           </a>
 
           <a className='inline-block text-2xl font-bold text-yellow' href="#">

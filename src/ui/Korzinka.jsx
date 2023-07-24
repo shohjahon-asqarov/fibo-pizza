@@ -9,8 +9,10 @@ export default function Korzinka() {
     const products = useSelector((state) => state.korzina);
     const dispatch = useDispatch();
 
+
+    // calculate all korzinka sum 
     let sum = 0
-    products.data.map(i => {
+    products.data.forEach(i => {
         if (i.count > 1) {
             sum += i.price * i.count
         } else {
@@ -19,8 +21,8 @@ export default function Korzinka() {
     })
 
     return (
-        <div className="flex flex-col rounded-lg bg-white  border border-gray">
-            <div className="overflow-y-scroll h-screen pb-16">
+        <div className="flex flex-col rounded-lg bg-white  border border-gray h-screen !overflow-y-scroll k-scroll">
+            <div className="pb-16">
                 {products.data.length >= 1 ? products.data.map((i, index) => {
                     return (
                         <div key={index} className="bg-white relative news-card flex px-2 py-3 rounded-md gap-3 items-center mb-4">
@@ -45,7 +47,7 @@ export default function Korzinka() {
                                     </button>
                                 </div>
 
-                                <span className="text-yellow font-bold absolute bottom-4 right-2">{i.price * i.count}₽</span>
+                                <span className="text-yellow font-bold absolute bottom-4 right-4">{i.price * i.count}₽</span>
                             </div>
 
                             <button className="absolute top-2 right-2 text-lg" onClick={() => dispatch(deleteKorzina(i))}>

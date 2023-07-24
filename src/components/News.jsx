@@ -23,8 +23,7 @@ export default function News() {
             price: 'от 120 ₽',
             img: newsImg
         },
-    ]
-
+    ] ;
 
     return (
         <section className="py-20">
@@ -32,7 +31,7 @@ export default function News() {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-between gap-6">
                 {news.map((item, index) => {
                     return (
-                        <div className="news-card flex rounded-xl bg-white py-4 px-5 gap-4 items-center cursor-pointer" key={index}>
+                        <div data-aos="zoom-in" className="news-card flex rounded-xl bg-white py-4 px-5 gap-4 items-center cursor-pointer hover:scale-95" key={index}>
                             <img src={item.img} alt="news card img" />
                             <div className="detail">
                                 <h3 className="text-lg">{item.title}</h3>

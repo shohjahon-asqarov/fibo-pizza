@@ -4,6 +4,7 @@ import { nextIcon, prevIcon, slide1, slide2 } from "../assets/data";
 import { useState } from "react";
 
 import "swiper/css";
+import News from "./News";
 
 export default function Hero() {
 
@@ -18,7 +19,7 @@ export default function Hero() {
 
     return (
 
-        <section className="mb-32">
+        <section data-aos="fade-up" className="mb-32">
             <Swiper className="w-full relative cursor-pointer"
                 slidesPerView={1}
                 loop
@@ -58,6 +59,8 @@ export default function Hero() {
                 </div>
 
             </Swiper>
+
+            <News />
 
         </section>
     )
