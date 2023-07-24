@@ -30,7 +30,7 @@ export default function Delivery() {
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-between gap-x-6 gap-y-14 mb-10">
                         {data.map((item, i) => {
                             return (
-                                <div key={i} className="relative bg-white rounded-xl px-5 pt-10 pb-5">
+                                <div data-aos="zoom-in" key={i} className="relative bg-white rounded-xl px-5 pt-10 pb-5">
                                     <div className="absolute left-0 -top-10 right-0">
                                         <div className="w-20 h-20 flex mx-auto rounded-full justify-center items-center bg-white">
                                             <img src={item.img} alt="img" className="w-11 h-11 object-cover" />

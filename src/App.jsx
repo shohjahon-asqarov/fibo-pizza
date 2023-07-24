@@ -10,7 +10,7 @@ import Stock from "./pages/Stock";
 import { ToastContainer } from "react-toastify";
 import Korzinka from "./ui/Korzinka";
 import { Drawer, IconButton } from "@material-tailwind/react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Antipasti from "./pages/Antipasti";
 import Beverages from "./pages/Beverages";
 import Combo from "./pages/Combo";
@@ -19,7 +19,16 @@ import Salads from "./pages/Salads";
 import Soups from "./pages/Soups";
 import Paste from "./pages/Paste";
 
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+
 export default function App() {
+
+  useEffect(() => {
+    AOS.init();
+  }, [])
 
   const [open, setOpen] = useState(false)
 

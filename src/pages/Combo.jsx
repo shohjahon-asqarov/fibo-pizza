@@ -18,7 +18,7 @@ export default function Combo() {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-between gap-x-6 gap-y-14 mb-10">
                 {pizza.map((p, index) => {
                     return (
-                        <div key={index} className="hover:shadow-lg p-4 rounded-lg cursor-pointer border border-gray">
+                        <div data-aos="fade-up" key={index} className="hover:shadow-lg p-4 rounded-lg cursor-pointer border border-gray">
                             <div className="card-header pl-3">
                                 <img src={p.img} alt={p.name} className="w-full h-auto mx-auto" />
                             </div>

@@ -15,7 +15,7 @@ export default function Soups() {
         <section className="py-10">
             <h2 className="section-text mb-10">Soups</h2>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-between gap-x-6 gap-y-14 mb-10">
+            <div data-aos="fade-up" className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-between gap-x-6 gap-y-14 mb-10">
                 {soups.map((p, index) => {
                     return (
                         <div key={index} className="hover:shadow-lg p-4 rounded-lg cursor-pointer border border-gray">
