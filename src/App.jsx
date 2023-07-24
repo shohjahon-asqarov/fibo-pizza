@@ -41,9 +41,10 @@ export default function App() {
   const [loader, setLoader] = useState(false)
 
 
-  useEffect(() => {
+  setTimeout(() => {
     setLoader(true)
-  }, [])
+  }, [3000])
+
 
   return (
     loader ?
