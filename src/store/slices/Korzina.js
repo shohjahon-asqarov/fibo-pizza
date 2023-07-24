@@ -11,7 +11,7 @@ export const korzinaSlice = createSlice({
         addKorzina: (state, action) => {
             const found = state.data.find(i => i.id === action.payload.id)
             if (found) {
-                state.data.map(i => {
+                state.data.forEach(i => {
                     if (i.id === found.id) {
                         i.count++
                     }
@@ -29,14 +29,14 @@ export const korzinaSlice = createSlice({
         },
 
         updateCount: (state, action) => {
-            state.data.map(i => {
+            state.data.forEach(i => {
                 if (i.id === action.payload.id) {
                     i.count++
                 }
             })
         },
         minusCount: (state, action) => {
-            state.data.map(i => {
+            state.data.forEach(i => {
                 if (i.id === action.payload.id) {
                     i.count--
                 }

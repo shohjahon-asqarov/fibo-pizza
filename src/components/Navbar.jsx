@@ -71,17 +71,17 @@ export default function Navbar() {
     <header className='pt-5' >
 
       <div className="top flex justify-between items-center">
-        <a href="#">
+        <a href="tel:+998939170731">
           <img className='md:w-auto w-16' src={logo} alt="site logo" />
         </a>
 
 
         <div className="hidden gap-5 items-center close-tab:flex">
-          <a href="#" className='btn-gray'>
+          <a href="tel:+998939170731" className='btn-gray'>
             Request a call
           </a>
 
-          <a className='inline-block text-2xl font-bold text-yellow' href="#">
+          <a className='inline-block text-2xl font-bold text-yellow' href="tel:+998939170731">
             998 93 917 07 31
           </a>
         </div>
@@ -96,7 +96,7 @@ export default function Navbar() {
             <NavLink className=' inline-block font-extrabold ' key={index} to={i.value}>{i.label}</NavLink>
           )
         })}
-        <a className='inline-block text-xl font-bold text-black py-4' href="#">
+        <a className='inline-block text-xl font-bold text-black py-4' href="tel:+998939170731">
           998 93 917 07 31
         </a>
       </div>
