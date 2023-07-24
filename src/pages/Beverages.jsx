@@ -1,9 +1,9 @@
 import { useDispatch } from "react-redux";
-import { pizza } from "../assets/data";
 
 import { addKorzina } from '../store/slices/Korzina'
+import { water } from "../assets/img/water/water";
 
-export default function Pizza() {
+export default function Beverages() {
 
     const dispatch = useDispatch();
 
@@ -13,10 +13,10 @@ export default function Pizza() {
 
     return (
         <section className="py-10">
-            <h2 className="section-text mb-10">Pizza</h2>
+            <h2 className="section-text mb-10">Beverages</h2>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-between gap-x-6 gap-y-14 mb-10">
-                {pizza.map((p, index) => {
+                {water.map((p, index) => {
                     return (
                         <div key={index} className="hover:shadow-lg p-4 rounded-lg cursor-pointer border border-gray">
                             <div className="card-header pl-3">

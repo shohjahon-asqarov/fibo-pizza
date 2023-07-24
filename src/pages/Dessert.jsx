@@ -3,7 +3,7 @@ import { pizza } from "../assets/data";
 
 import { addKorzina } from '../store/slices/Korzina'
 
-export default function Pizza() {
+export default function Dessert() {
 
     const dispatch = useDispatch();
 
@@ -13,7 +13,7 @@ export default function Pizza() {
 
     return (
         <section className="py-10">
-            <h2 className="section-text mb-10">Pizza</h2>
+            <h2 className="section-text mb-10">Dessert</h2>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-between gap-x-6 gap-y-14 mb-10">
                 {pizza.map((p, index) => {

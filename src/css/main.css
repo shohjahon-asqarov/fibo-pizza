@@ -23,7 +23,7 @@
 }
 
 @layer components {
-  .container {
+  section , header {
     @apply max-w-7xl mx-auto px-5 ;
   }
 

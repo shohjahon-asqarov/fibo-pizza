@@ -146,7 +146,6 @@ const stock = [
     },
 ];
 
-
 export {
     logo, slide1, slide2, yandex, nextIcon,
     prevIcon, newsImg, delivery1, delivery2, delivery3, delivery4,

@@ -17,52 +17,56 @@ export default function TabHeader({ open, setOpen }) {
 
     const data = [
         {
-            label: "Пицца",
+            label: "Home",
             value: "/",
         },
         {
-            label: "Паста",
-            value: "Паста",
+            label: "Pizza",
+            value: "/pizza",
         },
         {
-            label: "Супы ",
-            value: "Супы ",
+            label: "Paste",
+            value: "/paste",
         },
         {
-            label: "Салаты ",
-            value: "Салаты ",
+            label: "Soups ",
+            value: "/soups ",
         },
         {
-            label: "Напитки ",
-            value: "Напитки ",
+            label: "Salads ",
+            value: "/salads ",
         },
         {
-            label: "Десерты ",
-            value: "Десерты ",
+            label: "Beverages ",
+            value: "/beverages ",
         },
         {
-            label: "Бакалея ",
-            value: "Бакалея ",
+            label: "Desert ",
+            value: "/dessert ",
         },
         {
-            label: "Антипасти ",
-            value: "Антипасти ",
+            label: "Antipasti ",
+            value: "/antipasti ",
         },
         {
-            label: "Акции ",
-            value: "stock ",
+            label: "Stock ",
+            value: "/stock ",
         },
         {
-            label: "Комбо ",
-            value: "Комбо ",
+            label: "Combo ",
+            value: "/combo ",
         },
+        {
+            label: "Location ",
+            value: "/location ",
+        }
 
     ];
 
     return (
-        <nav className='sticky top-0 z-50 bg-white'>
+        <section className='sticky top-0 z-50 bg-white'>
             <div className="tabs  justify-center py-6 items-center max:justify-between flex">
-                <Tabs className="hidden close-tab:flex" value={'Пицца'}>
+                <Tabs className="hidden close-tab:flex" value={'/'}>
                     <TabsHeader>
                         {data.map(({ label, value }) => (
                             <Tab key={value} value={value}>
@@ -75,6 +79,6 @@ export default function TabHeader({ open, setOpen }) {
 
                 <button onClick={() => setOpen(!open)} className='btn-yellow max:static fixed bottom-8 right-6'>Корзина | {num.length}</button>
             </div>
-        </nav>
+        </section>
     )
 }

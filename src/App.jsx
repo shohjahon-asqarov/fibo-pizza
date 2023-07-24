@@ -7,44 +7,48 @@ import News from "./components/News";
 import TabHeader from "./components/TabHeader";
 import Pizza from "./pages/Pizza";
 import Stock from "./pages/Stock";
-import Button from "./ui/Button";
 import { ToastContainer } from "react-toastify";
 import Korzinka from "./ui/Korzinka";
 import { Drawer, IconButton } from "@material-tailwind/react";
 import { useState } from "react";
+import Antipasti from "./pages/Antipasti";
+import Beverages from "./pages/Beverages";
+import Combo from "./pages/Combo";
+import Dessert from "./pages/Dessert";
+import Salads from "./pages/Salads";
+import Soups from "./pages/Soups";
+import Paste from "./pages/Paste";
 
 export default function App() {
 
   const [open, setOpen] = useState(false)
 
-  const Home = () => {
-    return (
-      <>
-        <Hero />
-        <News />
-        <Pizza />
-      </>
-    )
-  }
+
 
   return (
     <div>
-      <div className="container">
+      <div>
         <Navbar />
         <TabHeader open={open} setOpen={setOpen} />
 
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Hero />} />
+          <Route path="/pizza" element={<Pizza />} />
           <Route path="/stock" element={<Stock />} />
+          <Route path="/antipasti" element={<Antipasti />} />
+          <Route path="/beverages" element={<Beverages />} />
+          <Route path="/combo" element={<Combo />} />
+          <Route path="/dessert" element={<Dessert />} />
+          <Route path="/salads" element={<Salads />} />
+          <Route path="/soups" element={<Soups />} />
+          <Route path="/paste" element={<Paste />} />
+          <Route path="/location" element={<Delivery />} />
         </Routes>
 
       </div>
 
-      <Delivery />
+      <Footer />
 
-      <div className="container">
-        <Footer />
-      </div>
 
       <ToastContainer
         position="bottom-right"
@@ -56,8 +60,8 @@ export default function App() {
         pauseOnFocusLoss
         draggable
         pauseOnHover
-        theme="light" />
-
+        theme="light"
+      />
 
       <Drawer placement="right" open={open} className="p-4">
         <div className="mb-6 flex items-center justify-between">

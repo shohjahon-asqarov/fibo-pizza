@@ -1,10 +1,9 @@
-import React from 'react'
 import { stock } from '../assets/data'
 
 export default function Stock() {
     return (
-        <section className='py-20'>
-            <h2 className='section-text mb-10'>Акции</h2>
+        <section className='pb-20 pt-10'>
+            <h2 className='section-text mb-10'>Stock</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {stock.map((item, index) => {
                     return (

@@ -18,7 +18,7 @@ export default function Hero() {
 
     return (
 
-        <section>
+        <section className="mb-32">
             <Swiper className="w-full relative cursor-pointer"
                 slidesPerView={1}
                 loop

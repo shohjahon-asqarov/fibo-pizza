@@ -2,7 +2,7 @@ import { f1, f2, f3, f4, f5, f6, logo } from "../assets/data";
 
 export default function Footer() {
     return (
-        <div className="py-20">
+        <section className="py-20">
             <div className="flex justify-between gap-10 md:gap-20 flex-col md:flex-row">
                 <div className="left md:w-3/5">
                     <a href="#"><img src={logo} alt="footer logo" /></a>
@@ -50,6 +50,6 @@ export default function Footer() {
 
                 <p className="text-sm font-semibold">YaBao Все праав защищены © 2021</p>
             </div>
-        </div>
+        </section>
     )
 }
