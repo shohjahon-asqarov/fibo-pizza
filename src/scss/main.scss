@@ -7,7 +7,6 @@
     transition: .3s box-shadow;
 }
 
-
 ::-webkit-scrollbar {
     width: 12px;
     height: 20px;
@@ -68,4 +67,14 @@
 
 .card-header {
     min-height: 200px;
+}
+
+.border-gray {
+    transition: .3s all !important;
+}
+
+.news-card {
+    &:hover {
+        transform: translateY(-10px) !important;
+    }
 }

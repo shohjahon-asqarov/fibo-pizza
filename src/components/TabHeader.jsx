@@ -77,7 +77,7 @@ export default function TabHeader({ open, setOpen }) {
 
                 </Tabs>
 
-                <button onClick={() => setOpen(!open)} className='btn-yellow max:static fixed bottom-8 right-6'>Корзина | {num.length}</button>
+                <button onClick={() => setOpen(!open)} className='btn-yellow max:static fixed bottom-8 right-6'>Card | {num.length}</button>
             </div>
         </section>
     )

@@ -21,11 +21,11 @@ export default function Korzinka() {
     })
 
     return (
-        <div className="flex flex-col rounded-lg bg-white  border border-gray h-screen !overflow-y-scroll k-scroll">
-            <div className="pb-16">
+        <div className="flex flex-col rounded-lg bg-white  h-screen !overflow-y-scroll k-scroll">
+            <div className="pb-16 px-3">
                 {products.data.length >= 1 ? products.data.map((i, index) => {
                     return (
-                        <div key={index} className="bg-white relative news-card flex px-2 py-3 rounded-md gap-3 items-center mb-4">
+                        <div key={index} className="bg-white relative border border-gray cursor-pointer flex px-2 py-3 rounded-md gap-3 items-center mb-4">
                             <img className="w-20 h-20" src={i.img} alt="order img" />
                             <div className="pr-6">
                                 <h3 className="text-sm font-bold mb-2">{i.title}</h3>
@@ -56,13 +56,13 @@ export default function Korzinka() {
                         </div>
                     )
                 }) :
-                    <div className="no-data">
+                    <div className="no-data text-center pt-10">
                         <h3 className="text-xl text-btn-gray-text">No items</h3>
                     </div>
                 }
             </div>
             <div className="flex justify-between absolute bottom-0 left-0 right-0 px-5 bg-white py-10">
-                <span className="font-semibold">Сумма заказа</span>
+                <span className="font-semibold">Order price</span>
                 <span className="text-yellow font-bold">{sum}₽</span>
             </div>
 
