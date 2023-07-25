@@ -90,10 +90,10 @@ export default function Navbar() {
       </div>
 
 
-      <div onClick={() => setOpen(false)} className={`mobile-nav bg-yellow flex flex-col py-10 gap-4 items-center rounded-2xl w-full right-0 sm:w-60 absolute sm:right-10 z-[60] close-tab:hidden ${open ? 'flex' : 'hidden'}`}>
+      <div onClick={() => setOpen(false)} className={`mobile-nav bg-yellow flex flex-col py-10 items-center rounded-2xl w-full right-0 sm:w-60 absolute sm:right-10 z-[60] close-tab:hidden ${open ? 'flex' : 'hidden'}`}>
         {data.map((i, index) => {
           return (
-            <NavLink className=' inline-block font-extrabold ' key={index} to={i.value}>{i.label}</NavLink>
+            <NavLink className='inline-block mb-4 font-extrabold ' key={index} to={i.value}>{i.label}</NavLink>
           )
         })}
         <a className='inline-block text-xl font-bold text-black py-4' href="tel:+998939170731">

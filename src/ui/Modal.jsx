@@ -54,10 +54,10 @@ export function Modal() {
                 </DialogBody>
 
                 <DialogFooter>
-                    <div className="flex gap-5">
+                    <div className="flex">
                         <button onClick={handleOpen} className="bg-gray rounded-lg text-btn-gray-text font-bold text-sm py-3 px-5 active:scale-95">Close</button>
 
-                        <button onClick={() => addProduct(currenProduct)} className="bg-yellow rounded-lg text-white font-bold text-sm py-3 px-5 active:scale-95">Add to card</button>
+                        <button onClick={() => addProduct(currenProduct)} className="bg-yellow rounded-lg text-white font-bold text-sm py-3 px-5 active:scale-95 ml-2">Add to card</button>
                     </div>
 
                 </DialogFooter>

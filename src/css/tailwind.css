@@ -1045,6 +1045,10 @@ section , header {
   margin-top: 1px;
 }
 
+.ml-2 {
+  margin-left: 0.5rem;
+}
+
 .box-border {
   box-sizing: border-box;
 }
