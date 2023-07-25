@@ -2,6 +2,7 @@ import { useDispatch } from "react-redux";
 
 import { addKorzina } from '../store/slices/Korzina'
 import { salads } from "../assets/img/salad/salads";
+import { showMoadal } from "../store/slices/Modal";
 
 export default function Salads() {
 
@@ -9,6 +10,10 @@ export default function Salads() {
 
     const addProduct = (p) => {
         dispatch(addKorzina(p));
+    }
+
+    const openModal = (p) => {
+        dispatch(showMoadal(p))
     }
 
     return (
@@ -20,7 +25,7 @@ export default function Salads() {
                     return (
                         <div data-aos="fade-up" key={index} className="hover:shadow-lg p-4 rounded-lg cursor-pointer border border-gray">
                             <div className="card-header pl-3">
-                                <img src={p.img} alt={p.name} className="w-full h-auto mx-auto" />
+                                <img onClick={() => openModal(p)} src={p.img} alt={p.name} className="w-full h-auto mx-auto" />
                             </div>
 
                             <div className="space-y-3 mb-3">

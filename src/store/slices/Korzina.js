@@ -7,7 +7,9 @@ export const korzinaSlice = createSlice({
     initialState: {
         data: [],
     },
+
     reducers: {
+        // add product function 
         addKorzina: (state, action) => {
             const found = state.data.find(i => i.id === action.payload.id)
             if (found) {
@@ -23,11 +25,13 @@ export const korzinaSlice = createSlice({
             }
         },
 
+        // delete product function 
         deleteKorzina: (state, action) => {
             state.data = state.data.filter(i => action.payload.id !== i.id)
             toast.success('Succefully deleted')
         },
 
+        // plus product count 
         updateCount: (state, action) => {
             state.data.forEach(i => {
                 if (i.id === action.payload.id) {
@@ -35,6 +39,8 @@ export const korzinaSlice = createSlice({
                 }
             })
         },
+
+        // minus product count 
         minusCount: (state, action) => {
             state.data.forEach(i => {
                 if (i.id === action.payload.id) {

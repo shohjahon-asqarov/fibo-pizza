@@ -31,6 +31,7 @@ import 'aos/dist/aos.css';
 // import toastify container 
 import { ToastContainer } from "react-toastify";
 import Loader from "./ui/Loader";
+import { Modal } from "./ui/Modal";
 
 export default function App() {
 
@@ -52,6 +53,8 @@ export default function App() {
   return (
     loader ?
       <div>
+        
+        <Modal />
 
         <div>
           <Navbar />
@@ -71,7 +74,6 @@ export default function App() {
             <Route path="/paste" element={<Paste />} />
             <Route path="/location" element={<Delivery />} />
           </Routes>
-
         </div>
 
         <Footer />
