@@ -1,14 +1,10 @@
-import React, { useState } from "react";
 
 import {
-    Button,
     Dialog,
-    DialogHeader,
     DialogBody,
     DialogFooter,
 } from "@material-tailwind/react";
 
-import { pizza } from "../assets/data";
 import { useDispatch, useSelector } from "react-redux";
 import { addKorzina } from "../store/slices/Korzina";
 import { closeModal } from "../store/slices/Modal";
