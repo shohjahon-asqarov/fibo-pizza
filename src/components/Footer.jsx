@@ -8,21 +8,21 @@ export default function Footer() {
                 <div className="left md:w-3/5">
                     <a href="tel:+998939170731"><img src={logo} alt="footer logo" /></a>
 
-                    <div className="flex justify-between my-5">
-                        <h3 className="font-bold text-base">Calorie content and composition</h3>
+                    <div className="flex flex-col md:flex-row justify-between my-5">
+                        <h3 className="font-bold text-base mb-4">Calorie content and composition</h3>
                         <h3 className="font-bold text-base">Legal information</h3>
 
                     </div>
 
                     <h3 className="font-bold text-base mb-3">We are in social networks</h3>
                     <div className="flex justify-between font-semibold text-btn-gray-text mb-5">
-                        <div className="flex flex-col gap-3">
-                            <a target="_blank" rel="noreferrer" href="https://t.me/dev_off">YouTube</a>
+                        <div className="flex flex-col">
+                            <a className="mb-3" target="_blank" rel="noreferrer" href="https://t.me/dev_off">YouTube</a>
                             <a target="_blank" rel="noreferrer" href="https://t.me/dev_off">Instagram</a>
                         </div>
 
-                        <div className="flex flex-col gap-3">
-                            <a target="_blank" rel="noreferrer" href="https://t.me/dev_off">Facebook</a>
+                        <div className="flex flex-col">
+                            <a className="mb-3" target="_blank" rel="noreferrer" href="https://t.me/dev_off">Facebook</a>
                             <a target="_blank" rel="noreferrer" href="https://t.me/dev_off">ВКонтакте</a>
                         </div>
                         <div></div>
