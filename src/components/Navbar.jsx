@@ -71,10 +71,9 @@ export default function Navbar() {
     <header className='pt-5' >
 
       <div className="top flex justify-between items-center">
-        <a href="index.html">
+        <NavLink to='/'>
           <img className='md:w-auto w-16' src={logo} alt="site logo" />
-        </a>
-
+        </NavLink>
 
         <div className="hidden gap-5 items-center close-tab:flex">
           <a href="tel:+998939170731" className='btn-gray'>
