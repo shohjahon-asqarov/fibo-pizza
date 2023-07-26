@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import { f1, f2, f3, f4, f5, f6, logo } from "../assets/data";
 
 export default function Footer() {
@@ -6,7 +7,7 @@ export default function Footer() {
             <div data-aos="fade-up" className="flex justify-between gap-10 md:gap-20 flex-col md:flex-row mb-10">
 
                 <div className="left md:w-3/5">
-                    <a href="tel:+998939170731"><img src={logo} alt="footer logo" /></a>
+                    <NavLink to="/"><img src={logo} alt="footer logo" /></NavLink>
 
                     <div className="flex flex-col md:flex-row justify-between my-5">
                         <h3 className="font-bold text-base mb-4">Calorie content and composition</h3>
@@ -41,16 +42,16 @@ export default function Footer() {
                         <a target="_blank" rel="noreferrer" className="text-center border-2 border-[#E3ECF5] rounded-xl py-2 col-span-2 font-semibold" href="https://t.me/dev_off">Write to us</a>
 
                     </div>
-                    <a className='inline-block text-2xl font-bold text-yellow mb-5' href="tel:+998939170731">
+                    <span className='inline-block text-2xl font-bold text-yellow mb-5'>
                         998 93 917 07 31
-                    </a> <br />
+                    </span> <br />
                     <a target="_blank" rel="noreferrer" href="https://t.me/dev_off" className='btn-gray'>
-                    Request a call
+                        Request a call
                     </a>
                 </div>
 
             </div>
-                <p className="text-sm font-semibold">YaBao All rights reserved. © 2021</p>
+            <p className="text-sm font-semibold">YaBao All rights reserved. © 2021</p>
         </section>
     )
 }

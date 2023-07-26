@@ -8,9 +8,6 @@ import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import TabHeader from "./components/TabHeader";
 
-
-
-
 // import mini components 
 import Korzinka from "./ui/Korzinka";
 import { Drawer, IconButton } from "@material-tailwind/react";
@@ -38,7 +35,6 @@ export default function App() {
   const Soups = React.lazy(() => import("./pages/Soups"));
   const Paste = React.lazy(() => import("./pages/Paste"));
 
-
   // aos init 
   useEffect(() => {
     AOS.init();
@@ -47,7 +43,6 @@ export default function App() {
   // for korzinka 
   const [open, setOpen] = useState(false)
   const [loader, setLoader] = useState(false)
-
 
   setTimeout(() => {
     setLoader(true)

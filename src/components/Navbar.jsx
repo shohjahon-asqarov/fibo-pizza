@@ -65,7 +65,6 @@ export default function Navbar() {
     }
   })
 
-
   return (
 
     <header className='pt-5' >
@@ -79,9 +78,9 @@ export default function Navbar() {
             Request a call
           </a>
 
-          <a className='inline-block text-2xl font-bold text-yellow' href="tel:+998939170731">
+          <span className='inline-block text-2xl font-bold text-yellow'>
             998 93 917 07 31
-          </a>
+          </span>
         </div>
 
         <button onClick={() => setOpen(!open)} className='close-tab:hidden block'><i className={`text-2xl ${open ? 'bi bi-x' : 'bi bi-list'}`}></i></button>
@@ -94,9 +93,9 @@ export default function Navbar() {
             <NavLink className='inline-block mb-4 font-extrabold ' key={index} to={i.value}>{i.label}</NavLink>
           )
         })}
-        <a className='inline-block text-xl font-bold text-black py-4' href="tel:+998939170731">
+        <span className='inline-block text-xl font-bold text-black py-4'>
           998 93 917 07 31
-        </a>
+        </span>
       </div>
     </header>
   )
