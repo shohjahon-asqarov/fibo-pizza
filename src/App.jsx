@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 
 // import componts 
@@ -8,16 +8,8 @@ import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import TabHeader from "./components/TabHeader";
 
-// import pages 
-import Pizza from "./pages/Pizza";
-import Stock from "./pages/Stock";
-import Antipasti from "./pages/Antipasti";
-import Beverages from "./pages/Beverages";
-import Combo from "./pages/Combo";
-import Dessert from "./pages/Dessert";
-import Salads from "./pages/Salads";
-import Soups from "./pages/Soups";
-import Paste from "./pages/Paste";
+
+
 
 // import mini components 
 import Korzinka from "./ui/Korzinka";
@@ -31,8 +23,19 @@ import 'aos/dist/aos.css';
 import { ToastContainer } from "react-toastify";
 import Loader from "./ui/Loader";
 import { Modal } from "./ui/Modal";
+import PageLoader from "./ui/PageLoader";
 
 export default function App() {
+  const Pizza = React.lazy(() => import('./pages/Pizza'));
+  const Stock = React.lazy(() => import("./pages/Stock"));
+  const Antipasti = React.lazy(() => import("./pages/Antipasti"));
+  const Beverages = React.lazy(() => import("./pages/Beverages"));
+  const Combo = React.lazy(() => import("./pages/Combo"));
+  const Dessert = React.lazy(() => import("./pages/Dessert"));
+  const Salads = React.lazy(() => import("./pages/Salads"));
+  const Soups = React.lazy(() => import("./pages/Soups"));
+  const Paste = React.lazy(() => import("./pages/Paste"));
+
 
   // aos init 
   useEffect(() => {
@@ -43,7 +46,7 @@ export default function App() {
   const [open, setOpen] = useState(false)
   const [loader, setLoader] = useState(false)
 
-  
+
   setTimeout(() => {
     setLoader(true)
   }, [3000])
@@ -59,19 +62,23 @@ export default function App() {
           <TabHeader open={open} setOpen={setOpen} />
 
           {/* pages  */}
-          <Routes>
-            <Route path="/" element={<Hero />} />
-            <Route path="/pizza" element={<Pizza />} />
-            <Route path="/stock" element={<Stock />} />
-            <Route path="/antipasti" element={<Antipasti />} />
-            <Route path="/beverages" element={<Beverages />} />
-            <Route path="/combo" element={<Combo />} />
-            <Route path="/dessert" element={<Dessert />} />
-            <Route path="/salads" element={<Salads />} />
-            <Route path="/soups" element={<Soups />} />
-            <Route path="/paste" element={<Paste />} />
-            <Route path="/location" element={<Delivery />} />
-          </Routes>
+
+          <Suspense fallback={<PageLoader />}>
+            <Routes>
+              <Route path="/" element={<Hero />} />
+              <Route path="/pizza" element={<Pizza />} />
+              <Route path="/stock" element={<Stock />} />
+              <Route path="/antipasti" element={<Antipasti />} />
+              <Route path="/beverages" element={<Beverages />} />
+              <Route path="/combo" element={<Combo />} />
+              <Route path="/dessert" element={<Dessert />} />
+              <Route path="/salads" element={<Salads />} />
+              <Route path="/soups" element={<Soups />} />
+              <Route path="/paste" element={<Paste />} />
+              <Route path="/location" element={<Delivery />} />
+            </Routes>
+          </Suspense>
+
         </div>
 
         <Footer />

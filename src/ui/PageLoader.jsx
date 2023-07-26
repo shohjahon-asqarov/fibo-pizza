@@ -1,8 +1,8 @@
 
-export default function Loader() {
+export default function PageLoader() {
     return (
-        <div className="section-loader">
-            <div className="loader">
+        <section>
+            <div className="page-loader">
                 <div className="lds-roller">
                     <div></div>
                     <div></div>
@@ -14,6 +14,6 @@ export default function Loader() {
                     <div></div>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
