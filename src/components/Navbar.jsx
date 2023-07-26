@@ -69,7 +69,6 @@ export default function Navbar() {
   return (
 
     <header className='pt-5' >
-
       <div className="top flex justify-between items-center">
         <NavLink to='/'>
           <img className='md:w-auto w-16' src={logo} alt="site logo" />

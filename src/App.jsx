@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 
-
 // import componts 
 import Delivery from "./components/Delivery";
 import Footer from "./components/Footer";

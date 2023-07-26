@@ -1005,6 +1005,10 @@ section , header {
   margin-left: 0.25rem;
 }
 
+.ml-2 {
+  margin-left: 0.5rem;
+}
+
 .ml-3 {
   margin-left: 0.75rem;
 }
@@ -1043,10 +1047,6 @@ section , header {
 
 .mt-px {
   margin-top: 1px;
-}
-
-.ml-2 {
-  margin-left: 0.5rem;
 }
 
 .box-border {
@@ -1282,10 +1282,6 @@ section , header {
   width: 1rem;
 }
 
-.w-40 {
-  width: 10rem;
-}
-
 .w-5 {
   width: 1.25rem;
 }
@@ -1322,6 +1318,10 @@ section , header {
   width: 93px;
 }
 
+.w-auto {
+  width: auto;
+}
+
 .w-full {
   width: 100%;
 }
@@ -1333,10 +1333,6 @@ section , header {
 
 .w-screen {
   width: 100vw;
-}
-
-.w-auto {
-  width: auto;
 }
 
 .min-w-\[100vw\] {
@@ -5651,12 +5647,12 @@ section , header {
     right: 2.5rem;
   }
 
-  .sm\:w-60 {
-    width: 15rem;
-  }
-
   .sm\:w-40 {
     width: 10rem;
+  }
+
+  .sm\:w-60 {
+    width: 15rem;
   }
 
   .sm\:grid-cols-2 {
