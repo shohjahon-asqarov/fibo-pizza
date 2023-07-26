@@ -13,12 +13,7 @@ export const korzinaSlice = createSlice({
         addKorzina: (state, action) => {
             const found = state.data.find(i => i.id === action.payload.id)
             if (found) {
-                state.data.forEach(i => {
-                    if (i.id === found.id) {
-                        i.count++
-                    }
-                })
-                toast.success('This product couns updated')
+                toast.warning('This product is already available')
             } else {
                 state.data.push(action.payload)
                 toast.success('Succefully added')
