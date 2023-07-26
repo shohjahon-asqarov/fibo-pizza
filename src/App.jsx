@@ -43,16 +43,15 @@ export default function App() {
   const [open, setOpen] = useState(false)
   const [loader, setLoader] = useState(false)
 
-
+  
   setTimeout(() => {
     setLoader(true)
   }, [3000])
 
-
   return (
     loader ?
       <div>
-        
+
         <Modal />
 
         <div>
@@ -91,7 +90,7 @@ export default function App() {
         />
 
         {/* korzinka right component  */}
-        <Drawer overlay={false} size={'400px'} placement="right" open={open} className="p-4">
+        <Drawer overlay={false} size={400} placement="right" open={open} className="p-4">
           <div className="mb-6 flex items-center justify-between">
             <h2>Card</h2>
             <IconButton onClick={() => setOpen(false)} variant="text" color="blue-gray" >
