@@ -26,6 +26,8 @@ import { Modal } from "./ui/Modal";
 import PageLoader from "./ui/PageLoader";
 
 export default function App() {
+
+  // for lazy loading 
   const Pizza = React.lazy(() => import('./pages/Pizza'));
   const Stock = React.lazy(() => import("./pages/Stock"));
   const Antipasti = React.lazy(() => import("./pages/Antipasti"));
